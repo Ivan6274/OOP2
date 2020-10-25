@@ -81,9 +81,8 @@ public class Radioman {
             return minNumbRadiostation;
 
 
-        } else {
+        } else
             this.currentNumbRadiostation = currentNumbRadiostation + 1;
-        }
 
 
         return currentNumbRadiostation;
@@ -95,37 +94,36 @@ public class Radioman {
             this.currentNumbRadiostation = maxNumbRadiostation;
             return maxNumbRadiostation;
 
-        } else {
+        } else
             this.currentNumbRadiostation = currentNumbRadiostation - 1;
-        }
 
 
         return currentNumbRadiostation;
 
     }
-    public int increaseVolume(){
+
+    public int increaseVolume() {
         if (currentVolume == maxVolume) {
             this.currentVolume = maxVolume;
             return maxVolume;
 
 
-        } else {
+        } else
             this.currentVolume = currentVolume + 1;
-        }
 
 
         return currentVolume;
 
     }
-    public int decreaseVolume(){
+
+    public int decreaseVolume() {
         if (currentVolume == minVolume) {
             this.currentVolume = minVolume;
             return minVolume;
 
 
-        } else {
+        } else
             this.currentVolume = currentVolume - 1;
-        }
 
 
         return currentVolume;
