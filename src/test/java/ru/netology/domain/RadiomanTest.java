@@ -74,6 +74,7 @@ class RadiomanTest {
         assertEquals(8, radioman.nextChannelButton());
         assertEquals(9, radioman.nextChannelButton());
         assertEquals(0, radioman.nextChannelButton());
+        assertEquals(1, radioman.nextChannelButton());
     }
 
     @Test
