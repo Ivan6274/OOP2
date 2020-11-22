@@ -1,12 +1,15 @@
 package ru.netology.domain;
 
 public class Radioman {
-    private int minNumbRadiostation;
-    private int maxNumbRadiostation;
-    private int currentNumbRadiostation;
-    private int minVolume;
-    private int maxVolume;
-    private int currentVolume;
+    private int id;
+    private String name = "name";
+    private int minNumbRadiostation = 0;
+    private int maxNumbRadiostation = 10;
+    private int currentNumbRadiostation = 0;
+    private int minVolume = 0;
+    private int maxVolume = 100;
+    private int currentVolume = 0;
+    private boolean on;
 
     public int getMinNumbRadiostation() {
         return minNumbRadiostation;
