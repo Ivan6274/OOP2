@@ -11,22 +11,14 @@ public class Radioman {
     private int currentVolume = 0;
     private boolean on;
 
-    public int getMinNumbRadiostation() {
-        return minNumbRadiostation;
+    public Radioman(int id, String name, int currentNumbRadiostation, int currentVolume, boolean on) {
+        this.id = id;
+        this.name = name;
+        this.currentNumbRadiostation = currentNumbRadiostation;
+        this.currentVolume = currentVolume;
+        this.on = on;
     }
 
-    public void setMinNumbRadiostation(int minNumbRadiostation) {
-        this.minNumbRadiostation = minNumbRadiostation;
-    }
-
-
-    public int getMaxNumbRadiostation() {
-        return maxNumbRadiostation;
-    }
-
-    public void setMaxNumbRadiostation(int maxNumbRadiostation) {
-        this.maxNumbRadiostation = maxNumbRadiostation;
-    }
 
 
     public int getCurrentNumbRadiostation() {
@@ -42,24 +34,6 @@ public class Radioman {
         }
 
         this.currentNumbRadiostation = currentNumbRadiostation;
-    }
-
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
     }
 
 
