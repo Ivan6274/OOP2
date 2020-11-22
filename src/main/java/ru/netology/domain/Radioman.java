@@ -1,5 +1,9 @@
 package ru.netology.domain;
 
+import lombok.Data;
+
+@Data
+
 public class Radioman {
     private int id;
     private String name = "name";
@@ -11,22 +15,6 @@ public class Radioman {
     private int currentVolume = 0;
     private boolean on;
 
-    public int getMinNumbRadiostation() {
-        return minNumbRadiostation;
-    }
-
-    public void setMinNumbRadiostation(int minNumbRadiostation) {
-        this.minNumbRadiostation = minNumbRadiostation;
-    }
-
-
-    public int getMaxNumbRadiostation() {
-        return maxNumbRadiostation;
-    }
-
-    public void setMaxNumbRadiostation(int maxNumbRadiostation) {
-        this.maxNumbRadiostation = maxNumbRadiostation;
-    }
 
 
     public int getCurrentNumbRadiostation() {
@@ -45,22 +33,6 @@ public class Radioman {
     }
 
 
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
-    }
 
 
     public int getCurrentVolume() {
