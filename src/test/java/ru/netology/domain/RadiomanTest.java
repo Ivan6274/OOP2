@@ -5,16 +5,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RadiomanTest {
+    Radioman radioman = new Radioman();
     @Test
+
     public void setCurrentNumbRadiostation() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinNumbRadiostation());
         radioman.setMinNumbRadiostation(0);
         assertEquals(0, radioman.getMinNumbRadiostation());
 
         assertEquals(0, radioman.getMaxNumbRadiostation());
-        radioman.setMaxNumbRadiostation(9);
-        assertEquals(9, radioman.getMaxNumbRadiostation());
+        radioman.setMaxNumbRadiostation(10);
+        assertEquals(10, radioman.getMaxNumbRadiostation());
 
         assertEquals(0, radioman.getCurrentNumbRadiostation());
         radioman.setCurrentNumbRadiostation(-14);
@@ -31,38 +33,38 @@ class RadiomanTest {
 
     @Test
     public void setCurrentVolume() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinVolume());
         radioman.setMinVolume(0);
         assertEquals(0, radioman.getMinVolume());
 
         assertEquals(0, radioman.getMaxVolume());
-        radioman.setMaxVolume(10);
-        assertEquals(10, radioman.getMaxVolume());
+        radioman.setMaxVolume(100);
+        assertEquals(100, radioman.getMaxVolume());
 
         assertEquals(0, radioman.getCurrentVolume());
         radioman.setCurrentVolume(-14);
         assertEquals(0, radioman.getCurrentVolume());
 
         assertEquals(0, radioman.getCurrentVolume());
-        radioman.setCurrentVolume(14);
+        radioman.setCurrentVolume(144);
         assertEquals(0, radioman.getCurrentVolume());
 
         assertEquals(0, radioman.getCurrentVolume());
-        radioman.setCurrentVolume(5);
-        assertEquals(5, radioman.getCurrentVolume());
+        radioman.setCurrentVolume(50);
+        assertEquals(50, radioman.getCurrentVolume());
     }
 
     @Test
     public void nextChannelButton() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinNumbRadiostation());
         radioman.setMinNumbRadiostation(0);
         assertEquals(0, radioman.getMinNumbRadiostation());
 
         assertEquals(0, radioman.getMaxNumbRadiostation());
-        radioman.setMaxNumbRadiostation(9);
-        assertEquals(9, radioman.getMaxNumbRadiostation());
+        radioman.setMaxNumbRadiostation(10);
+        assertEquals(10, radioman.getMaxNumbRadiostation());
 
         assertEquals(0, radioman.getCurrentNumbRadiostation());
         radioman.setCurrentNumbRadiostation(4);
@@ -76,20 +78,20 @@ class RadiomanTest {
 
     @Test
     public void nextChannelButtonUnderMax() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinNumbRadiostation());
         radioman.setMinNumbRadiostation(0);
         assertEquals(0, radioman.getMinNumbRadiostation());
 
         assertEquals(0, radioman.getMaxNumbRadiostation());
-        radioman.setMaxNumbRadiostation(9);
-        assertEquals(9, radioman.getMaxNumbRadiostation());
+        radioman.setMaxNumbRadiostation(10);
+        assertEquals(10, radioman.getMaxNumbRadiostation());
 
         assertEquals(0, radioman.getCurrentNumbRadiostation());
-        radioman.setCurrentNumbRadiostation(8);
-        assertEquals(8, radioman.getCurrentNumbRadiostation());
+        radioman.setCurrentNumbRadiostation(9);
+        assertEquals(9, radioman.getCurrentNumbRadiostation());
 
-        assertEquals(9, radioman.nextChannelButton());
+        assertEquals(10, radioman.nextChannelButton());
         assertEquals(0, radioman.nextChannelButton());
         assertEquals(1, radioman.nextChannelButton());
 
@@ -97,14 +99,14 @@ class RadiomanTest {
 
     @Test
     public void prevChannelButton() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinNumbRadiostation());
         radioman.setMinNumbRadiostation(0);
         assertEquals(0, radioman.getMinNumbRadiostation());
 
         assertEquals(0, radioman.getMaxNumbRadiostation());
-        radioman.setMaxNumbRadiostation(9);
-        assertEquals(9, radioman.getMaxNumbRadiostation());
+        radioman.setMaxNumbRadiostation(10);
+        assertEquals(10, radioman.getMaxNumbRadiostation());
 
         assertEquals(0, radioman.getCurrentNumbRadiostation());
         radioman.setCurrentNumbRadiostation(4);
@@ -118,77 +120,77 @@ class RadiomanTest {
 
     @Test
     public void prevChannelButtonUnderMin() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinNumbRadiostation());
         radioman.setMinNumbRadiostation(0);
         assertEquals(0, radioman.getMinNumbRadiostation());
 
         assertEquals(0, radioman.getMaxNumbRadiostation());
-        radioman.setMaxNumbRadiostation(9);
-        assertEquals(9, radioman.getMaxNumbRadiostation());
+        radioman.setMaxNumbRadiostation(10);
+        assertEquals(10, radioman.getMaxNumbRadiostation());
 
         assertEquals(0, radioman.getCurrentNumbRadiostation());
         radioman.setCurrentNumbRadiostation(1);
         assertEquals(1, radioman.getCurrentNumbRadiostation());
 
         assertEquals(0, radioman.prevChannelButton());
+        assertEquals(10, radioman.prevChannelButton());
         assertEquals(9, radioman.prevChannelButton());
-        assertEquals(8, radioman.prevChannelButton());
 
     }
 
     @Test
     public void increaseVolume() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinVolume());
         radioman.setMinVolume(0);
         assertEquals(0, radioman.getMinVolume());
 
         assertEquals(0, radioman.getMaxVolume());
-        radioman.setMaxVolume(10);
-        assertEquals(10, radioman.getMaxVolume());
+        radioman.setMaxVolume(100);
+        assertEquals(100, radioman.getMaxVolume());
 
         assertEquals(0, radioman.getCurrentVolume());
-        radioman.setCurrentVolume(5);
-        assertEquals(5, radioman.getCurrentVolume());
+        radioman.setCurrentVolume(50);
+        assertEquals(50, radioman.getCurrentVolume());
 
-        assertEquals(6, radioman.increaseVolume());
-        assertEquals(7, radioman.increaseVolume());
-        assertEquals(8, radioman.increaseVolume());
+        assertEquals(51, radioman.increaseVolume());
+        assertEquals(52, radioman.increaseVolume());
+        assertEquals(53, radioman.increaseVolume());
 
 
     }
 
     @Test
     public void increaseVolumeMaxLimit() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinVolume());
         radioman.setMinVolume(0);
         assertEquals(0, radioman.getMinVolume());
 
         assertEquals(0, radioman.getMaxVolume());
-        radioman.setMaxVolume(10);
-        assertEquals(10, radioman.getMaxVolume());
+        radioman.setMaxVolume(100);
+        assertEquals(100, radioman.getMaxVolume());
 
         assertEquals(0, radioman.getCurrentVolume());
-        radioman.setCurrentVolume(8);
-        assertEquals(8, radioman.getCurrentVolume());
+        radioman.setCurrentVolume(98);
+        assertEquals(98, radioman.getCurrentVolume());
 
-        assertEquals(9, radioman.increaseVolume());
-        assertEquals(10, radioman.increaseVolume());
-        assertEquals(10, radioman.increaseVolume());
+        assertEquals(99, radioman.increaseVolume());
+        assertEquals(100, radioman.increaseVolume());
+        assertEquals(100, radioman.increaseVolume());
     }
 
     @Test
     public void decreaseVolume() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinVolume());
         radioman.setMinVolume(0);
         assertEquals(0, radioman.getMinVolume());
 
         assertEquals(0, radioman.getMaxVolume());
-        radioman.setMaxVolume(10);
-        assertEquals(10, radioman.getMaxVolume());
+        radioman.setMaxVolume(100);
+        assertEquals(100, radioman.getMaxVolume());
 
         assertEquals(0, radioman.getCurrentVolume());
         radioman.setCurrentVolume(5);
@@ -202,14 +204,14 @@ class RadiomanTest {
     }
     @Test
     public void decreaseVolumeMinLimit() {
-        Radioman radioman = new Radioman();
+
         assertEquals(0, radioman.getMinVolume());
         radioman.setMinVolume(0);
         assertEquals(0, radioman.getMinVolume());
 
         assertEquals(0, radioman.getMaxVolume());
-        radioman.setMaxVolume(10);
-        assertEquals(10, radioman.getMaxVolume());
+        radioman.setMaxVolume(100);
+        assertEquals(100, radioman.getMaxVolume());
 
         assertEquals(0, radioman.getCurrentVolume());
         radioman.setCurrentVolume(2);
